@@ -186,7 +186,7 @@ for i, L in enumerate(leads):
         for px, py in pts:
             d.ellipse([px - 3, py - 3, px + 3, py + 3], fill=RED)
         fl = F(F_BLACK, 13)
-        d.text((x + 16, iy + 6), "TAIEX -6% · KOSPI -5.6%", font=fl, fill=RED)
+        d.text((x + 200, iy + 6), "SELL-OFF", font=fl, fill=RED)
     fh = F(F_BLACK, 19)
     yy = block(x + 10, iy + 90, L["head"], fh, LW - 20, 23, max_lines=2)
     fbd = F(F_REG, 12)
