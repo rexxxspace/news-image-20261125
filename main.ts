@@ -11,11 +11,16 @@
 //
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync } from "node:fs";
+import { copyFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const folder = dirname(fileURLToPath(import.meta.url));
 const targetDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+
+// The output folder is not guaranteed to exist yet (a fresh local dry run
+// points MAKEFUN_OUTPUT_DIR at a folder nobody made), and copyFileSync
+// throws on a missing destination directory - so create it first.
+mkdirSync(targetDir, { recursive: true });
 
 copyFileSync(join(folder, "entry.png"), join(targetDir, "entry.png"));

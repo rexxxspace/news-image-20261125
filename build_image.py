@@ -12,6 +12,14 @@ Date discipline is the point of this edition: every story below happened
 or was first reported on Wednesday 25 November 2026, checked the same
 morning against Reuters, AP, AFP, NOS, Antara, Bernama and PANA items
 carrying a 25 November 2026 dateline or publication stamp.
+
+Revision note (submission pass): the markets lead card originally drew
+its "TAIEX -6% · KOSPI -5.6%" caption straight over the falling chart
+line, where the two reds collided and the text turned unreadable at
+thumbnail size. The caption now sits clear of the line as a short
+"SELL-OFF" tag in the card's top-right corner, and the exact index
+numbers live in the headline and body copy underneath the chart,
+where nothing crosses them.
 """
 from PIL import Image, ImageDraw, ImageFont
 
